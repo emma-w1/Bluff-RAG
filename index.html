@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="BIRD-bench" />
+    <meta name="author" content="" />
+    <link rel="icon" href="./logo/bird_fig_main.png" type="image/x-icon" />
+    <title>BLUF-1000</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./style/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link
+      href="./style/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./style/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="./style/clean-blog.min.css" rel="stylesheet" />
+    <link href="./style/bird.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="masthead" id="header-color">
+      <div style="background-color: #485159; text-align: left">
+        <img
+          style="margin-top: 5px; padding: 15px"
+          height="70px"
+          src="./logo/algoverse_logo.png"
+        />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-md-12 mx-auto">
+            <div class="row site-heading flex-box">
+              <div class="col-lg-3">
+                <img id="logo-img" src="logo/BLUFF_logo.png" alt="logo" />
+              </div>
+              <div class="col-lg-9">
+                <div class="align-middle">
+                  <h1 id="bird-title">BLUFF-1000</h1>
+                  <span class="subheading" id="caption"><b>Evaluating RAG Linguistic Uncertainty under Poor Retrieval Conditions</b></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+
+    <div class="container" id="main">
+      <div class="floating-credit">
+      Template adapted from: <a href="https://github.com/bird-bench/bird-bench.github.io" target="_blank">bird-bench</a>
+      </div>
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="list-group">
+            <div class="list-group-item" id="introduction">
+              <!-- <div style="display: grid; grid-template-columns: auto auto; align-items: center;"> -->
+              <h4>About BLUFF-1000</h4>
+              <!-- </div> -->
+              <p>
+                BLUFF-1000 is a comprehensive benchmark created to test a model's ability to appropriately express linguistic uncertainty when provided unreliable or irrelevant content from a retrieval system. 
+                It contains 500 question-answering tasks across 10 distinct domains, amounting to 1000 model responses under both clear and ambiguous contexts.
+                Each entry consists of a query, a clear and ambiguous source set, and 2 gold responses that reflect the uncertainty of the context. 
+                BLUFF-1000 contributes to existing research by highlighting the gap between external confidence expression and source quality.
+
+              </p>
+              <div id="button-group">
+                <div class="button-row">
+                  <a
+                    href="https://drive.google.com/file/d/1FkTS_F6eDyPmY5sk1G8mXdIsllNf4BK0/view?usp=drive_link"
+                    target="_blank"
+                  >
+                    <button type="button" class="btn btn-a"> 📄 <b>Paper</b> (published on Arxiv shortly)</button>
+                  </a>
+                </div>
+                <div class="button-row">
+                  <a
+                    href="https://github.com/rzharzhavsky/Bluff-RAG"
+                    target="_blank"
+                  >
+                    <button type="button" class="btn btn-a btn-ab"> 💻 <b>Code</b></button>
+                  </a>
+                </div>
+            
+              </div>
+            </div>
+            <style>
+              .scroll-container {
+                position: relative;
+                width: 100%;
+                max-height: 300px;
+                overflow-y: scroll;
+              }
+
+              /* Hide the scrollbar by default */
+              .scroll-container::-webkit-scrollbar {
+                width: 10px;
+                background: transparent;
+              }
+
+              /* Set the scrollbar thumb color */
+              .scroll-container::-webkit-scrollbar-thumb {
+                background-color: #ffffff;
+                border-radius: 5px;
+              }
+
+              /* Show the scrollbar when the mouse is hovering over the scroll container */
+              .scroll-container:hover::-webkit-scrollbar {
+                width: 10px;
+              }
+
+              .scroll-container:hover::-webkit-scrollbar-thumb:hover {
+                background-color: #555;
+              }
+            </style>
+            <script>
+              // A new function for BIRD-CRITIC
+              function showBirdCriticMessage() {
+                alert(
+                  "BIRD-CRITIC is the first SQL debugging benchmark investigating whether LLMs can effectively resolve user issues in real-world database applications. It contains 600 tasks in dev and 200 OOD hidden tests. The full challenges in BIRD-SQL 2025 are under collaboration with Google Cloud.\n\n" +
+                  "Key Highlights:\n" +
+                  "• 5 popular SQL dialects: MySQL, PostgreSQL, SQLServer, Oracle, and one OOD dialect\n" +
+                  "• Challenging tasks that go beyond SELECT (e.g., CREATE TRIGGER, UPDATE constraints, SQL Optimization)\n" +
+                  "• Each task is derived from real-world user cases and reproduced within the BIRD environment, verified by human experts\n" +
+                  "• Multi-thread sandbox enabling fast and robust evaluation\n" +
+                  "• Professionally curated test cases for each task.\n" +
+                  "We will release a PREVIEW set in this month and full set next month. Email us if you have some suggestions or new contents that you want to see!\n\n" +
+                  "Other exciting Sibling benchmarks you may expect in BIRD-SQL 2025:\n" +
+                  "• BIRD-CRITIC 1.5 (Repo-level Code Debugging for Real-World DB Applications)\n" +
+                  "• BIRD-Interact\n" +
+                  "• BIRD-Vision\n" +
+                  "• BIRD-Pro & BIRD-Pro Max: The second generation of BIRD-SQL covering comprehensive DB operations / BI querying with new open-source enterprise-level databases with thousands of columns, advanced constrains and TB-level data."
+                );
+              }
+            </script>
+            <script>
+                function showLiveSQLBenchMessage() {
+                  alert(
+                    "Inspired by great LiveCodeBench, we're developing LiveSQLBench to provide a robust and contamination-free evaluation for text-to-SQL models on challenging, comprehensive benchmark, which will be updated periodically.\n\n" +
+                    "LiveSQLBench (BIRD-SQL Pro v0.5) will feature diverse real-world user queries, including Business Intelligence (BI), CRUD operations, etc.\n\n" +
+                    "Each release will include 50 new, fully open-source DBs curated by the BIRD team through expert collaboration and continuous improvement. It will cover a wide range of database sizes, from end-user level (around 39 columns) to industrial level (1340+ columns), catering to various query types.\n\n" +
+                    "Look for LiveSQLBench to launch in March! And more exciting text-to-SQL evaluations on the way~ :) "
+                  );
+                }
+            </script>
+
+
+            
+            <div class="list-group-item">
+              <h4>Contact Us!</h4>
+              <p>
+                If you encounter any problems in our code or have any suggestions or questions, or please feel free to
+                contact us at <code>emmawong565@gmail.com</code>.
+              </p>
+              
+            </div>
+
+            </head>
+            <div class="list-group-item">
+              <h4>Bibtex Citation</h4>
+              <pre id="citation">Coming soon!
+</pre
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="btn-group mb-3 w-100">
+            <button id="overall-leaderboard-btn" class="btn btn-f">Model Performance Comparison</button>
+            <button id="single-model-leaderboard-btn" class="btn btn-f">Key Findings</button>
+          </div>
+
+          <div id="overall-leaderboard">
+            <div class="card card-outline-secondary">
+              <div class="card-header">Model Performance</div>
+              
+            </div>
+            <div>
+              <div class="list-group-item" id="illustration">
+                <h3>Model Performance Comparison</h3>
+                <p>
+                  This table showcases the performance of various models on the BLUFF-1000 benchmark. 
+                  Models are evaluated based on their ability to accurately express linguistic uncertainty in response to queries with both clear and ambiguous contexts. 
+                  Additionally, source retrieval, factuality, and faithfulness were also measured to provide a comprehensive assessment of each model's capabilities.
+                </p>
+                <img
+                  src="./img/performance_metrics.png"
+                  class="column-img"
+                  id="overall-leaderboard-img"
+                  style="margin: 0 auto">
+                <h5>Metrics :</h5>
+                <ul>
+                  <li><b>Ambiguity Sensitivity Index (ASI)</b> evaluates whether
+the model appropriately lowers confidence and raises hedging when faced with ambiguous sources.</li>
+                  <li><b>Verbal Uncertainty Index (VUI)</b>
+evaluates how precisely the model uses hedged language,
+measuring the F1-score of hedge detection.</li>
+                  <li><b>Source Set on Hedging</b> measures the change in hedging
+rate between clear and ambiguous questions throughout the
+dataset.</li>
+                  <li><b>Lexical Overconfidence Index</b> measures the overconfident language in incorrect answers.</li>
+                  <li><b>Hedge Precision</b> measures the proportion of hedges used appropriately when the model is incorrect.</li>
+                  <li><b>Hedge Recall</b> measures the proportion of incorrect answers in which hedging was used.</li>
+                  <li><b>Refusal Count</b> measures the proportion of questions where
+the confidence of the model drops below the 15th percentile
+threshold, causing it to refuse to answer.</li>
+                  <li><b>Refusal Sensitivity</b> measures the difference in refusal
+rate of the model between ambiguous and clear information
+sets.</li>
+                  <li><b>Answer Correctness</b> measures the average
+correctness across all answered questions.</li>
+                  <li><b>Overall Faithfulness</b> evaluates an LLM’s ability to stay faithful
+to information from the sources it retrieves with RAG while
+avoiding the hallucination of information.</li>
+                </ul>
+          </div>
+          </div>
+          </div>
+          <div id="single-model-leaderboard" style="display: none;">
+            <div class="list-group-item" id="illustration">
+              <h3>Abstract:</h3>
+              <p>Retrieval-augmented generation (RAG) systems often fail to
+adequately modulate their linguistic certainty when evidence
+deteriorates. This gap in how models respond to imperfect retrieval is critical for the safety and reliability of a real-world
+RAG system. To address this gap, we propose BLUFF-1000,
+a benchmark systematically designed to evaluate how large
+language models (LLMs) manage linguistic confidence under conflicting evidence to simulate poor retrieval. We created a novel dataset, introduced two novel metrics, calculated
+full metrics quantifying faithfulness, factuality, linguistic uncertainty, and calibration, and finally conducted experiments
+on 7 LLMs on the benchmark, measuring their uncertainty
+awareness and general performance. Our findings uncover a
+fundamental misalignment between linguistic expression of
+uncertainty and source quality across seven state-of-the-art
+RAG systems. We recommend that future RAG systems incorporate uncertainty-aware methods to transparently convey
+confidence throughout the system.</p>
+              <img
+                src= "./img/figure1.png"
+                class="column-img"
+                id="overall-leaderboard-img"
+                style="margin: 0 auto">
+              <h3>Novel Contributions:</h3>
+              <ul>
+                <li>The creation of BLUFF-1000, a novel benchmark that
+measures a model’s ability to express uncertainty in responses. BLUFF-1000 includes questions spanning multiple subject areas to encourage variability in domains.
+500 questions with two source sets are included, amounting to 1000 model responses.</li>
+                <li>The creation of a novel metric to measure verbal uncertainty, named the Verbal Uncertainty Index (VUI). VUI
+quantifies the frequency of hedge words in a response
+with respect to accuracy and identifies the extent to which
+a model uses linguistic uncertainty when necessary.</li>
+                <li> The creation of a novel metric, labeled Ambiguity Sensitivity Index (ASI), used to quantify changes in a
+model’s confidence changes when evidence shifts from
+clear to ambiguous. Models that can recognize when the sources ”retrieved” are unreliable or contradictory exhibit a higher ASI score.</li>
+                <li>Evaluation uncovers a fundamental misalignment between linguistic confidence expression and source quality across seven state-of-the-art LLMs, demonstrating
+that current RAG systems fail to appropriately modulate
+their linguistic certainty when evidence quality degrades.</li>
+              </ul>
+              <h3>Methodology - Dataset Generation</h3>
+              <img
+                src= "./img/qa_pair_generation_workflow.png"
+                class="column-img"
+                id="overall-leaderboard-img"
+                style="margin: 0 auto">
+              <img
+                src= "./img/source_classification_flowchart.png"
+                class="column-img"
+                id="overall-leaderboard-img"
+                style="margin: 0 auto">
+              <h3>Methodology - Evaluation</h3>
+              <p>We evaluate performance on 7 LLMs</p>
+              <h3>Results (Visualized) </h3>
+              <img
+                src= "./img/figure3.png"
+                class="column-img"
+                id="overall-leaderboard-img"
+                style="margin: 0 auto">
+              <img
+                src= "./img/figure4_without_legend.png"
+                class="column-img"
+                id="overall-leaderboard-img"
+                style="margin: 0 auto">
+              <img
+                src= "./img/figure5.png"
+                class="column-img"
+                id="overall-leaderboard-img"
+                style="margin: 0 auto">
+              <img
+                src= "./img/figure6.png"
+                class="column-img"
+                id="overall-leaderboard-img"
+                style="margin: 0 auto">
+              <h3>Conclusion</h3>
+              <p>We proposed BLUFF-1000, a benchmark meticulously con-
+structed to evaluate how LLMs manage linguistic confi-
+dence under imperfect retrieval conditions. Along with var-
+ious other metrics for answer correctness, faithfulness, re-
+fusals, and numerical overconfidence, we provide a frame-
+work for evaluating generation components of RAG sys-
+tems. We evaluate modern LLMs using gathered sources,
+varying the source sets provided to models for each question.
+Through these methods, our most important finding was the
+consistent patterns of misaligned hedging.
+Although we do not evaluate retrieval components of
+RAG systems, our findings indicate that future progress in
+full RAG pipelines as a whole must include developments
+in uncertainty-aware methods to transparently convey confi-
+dence throughout the system. Essentially, models must not
+only know they are likely to be wrong, but they must also
+communicate that skepticism transparently to users. This
+benchmark provides a foundation for measuring and eventu-
+ally improving this aspect of model trustworthiness, which
+is critical for LLMs that serve the user.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <hr />
+
+      <!-- Bootstrap core JavaScript -->
+      <script src="./script/jquery.min.js"></script>
+      <script src="./script/bootstrap.bundle.min.js"></script>
+
+      <!-- Custom scripts for this template -->
+      <script src="./script/clean-blog.min.js"></script>
+      <!-- Custom script for leaderboard type toggle -->
+      <script src="./script/leaderboard-toggle.min.js"></script>
+    </div>
+  </body>
+</html>
