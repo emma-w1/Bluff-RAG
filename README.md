@@ -1,4 +1,7 @@
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
+- forked from team repo 
+- time should be combined from CALM-RAG500 & BLUFF-RAG (since name of repo was changed)
+
 # BLUFF-1000 Benchmark
 
 > **Benchmark for Large Language Model Understanding of Factual Fallibility in Retrieval-Augmented Generation**
