@@ -4,6 +4,8 @@
 
 BLUFF-1000 is a comprehensive benchmark and evaluation harness for assessing calibration-aware Retrieval-Augmented Generation (RAG) systems across multiple models (GPT-4o, LLaMA-2/70B, Mistral-7B, Gemini). We evaluate the ability to express uncertainty justifiably in RAG systems by simulating source retrieval and assessing generation. This topic is especially important, since real-world RAG systems often retrieve unreliable or contradictory information from sources.
 
+BLUFF-1000 contains 500 questions spanning 10 domains. Each question contains 2 source sets, amounting to 1000 total evaluation instances.
+
 
 ## Core Hypotheses
 
@@ -15,6 +17,11 @@ BLUFF-1000 is a comprehensive benchmark and evaluation harness for assessing cal
 
 ## Results
 <img width="994" height="346" alt="image" src="https://github.com/user-attachments/assets/b74c599a-e5fb-486c-91e4-1554250e1cec" />
+Evaluation uncovers a fundamental misalignment between linguistic confidence expression and source quality across seven state-of-the-art LLMs, demonstrating
+
+that current RAG systems fail to appropriately modulate
+their linguistic certainty when evidence quality degrades.
+
 
 ## Paper Draft
 [https://drive.google.com/file/d/1FkTS_F6eDyPmY5sk1G8mXdIsllNf4BK0/view?usp=sharing
