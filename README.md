@@ -1,22 +1,26 @@
-# BLUFF-RAG-500 Benchmark
+# BLUFF-1000 Benchmark
 
 > **Benchmark for Large Language Model Understanding of Factual Fallibility in Retrieval-Augmented Generation**
 
-BLUFF-RAG-500 is a comprehensive benchmark and evaluation harness for assessing calibration-aware Retrieval-Augmented Generation (RAG) systems across multiple models (GPT-4o, LLaMA-2/70B, Mistral-7B, Gemini).
+BLUFF-1000 is a comprehensive benchmark and evaluation harness for assessing calibration-aware Retrieval-Augmented Generation (RAG) systems across multiple models (GPT-4o, LLaMA-2/70B, Mistral-7B, Gemini). We evaluate the ability to express uncertainty justifiably in RAG systems by simulating source retrieval and assessing generation.
 
-## 🎯 Core Hypotheses
+
+## Core Hypotheses
 
 | ID | Hypothesis | Key Metrics |
 |----|------------|-------------|
 | **H1** | Sparse/contradictory evidence → verbal over-confidence | Retrieval-Recall vs Confidence ρ, Overconfidence Index (OCI) |
 | **H2** | Adding retrieval ↑ accuracy **but** ↑ calibration error | ECE (with-/without-RAG), Brier Score |
-| **H3** | **Hedging** frequency aligns with uncertainty | Hedge Precision/Recall, Lexical Overconfidence Index |
-| **H4** | Self-reported probs correlate w/ truth but need scaling | Corr(p, y) (ρ), ECE ↓ after isotonic |
-| **H5** | Calibration-tuned language ↓ user acceptance of wrong answers | Human Acceptance of Wrong, Hedge Alignment Score |
 
-## 🚀 Quick Start
 
-### Installation
+## Results
+<img width="994" height="346" alt="image" src="https://github.com/user-attachments/assets/b74c599a-e5fb-486c-91e4-1554250e1cec" />
+
+## Paper Draft
+[https://drive.google.com/file/d/1FkTS_F6eDyPmY5sk1G8mXdIsllNf4BK0/view?usp=sharing
+](url)
+
+## Installation
 
 ```bash
 git clone https://github.com/your-repo/BLUFF-RAG500.git
@@ -24,7 +28,7 @@ cd BLUFF-RAG500
 pip install -r requirements.txt
 ```
 
-### Basic Usage
+## Basic Usage
 
 ```python
 from runner import RAGEvaluator
@@ -106,7 +110,7 @@ Main evaluation harness:
 - **Retrieval-Confidence Correlation**: How retrieval quality affects confidence
 - **Recall vs Confidence**: Relationship between evidence quality and certainty
 
-## 🎛️ Evaluation Modes
+## Evaluation Modes
 
 ### Standard Evaluation
 ```python
@@ -123,14 +127,6 @@ results = evaluator.run_evaluation("openai", prompt_type="calibration")
 results = evaluator.run_evaluation("openai", prompt_type="uncertainty")
 ```
 
-## 📋 Reference Datasets
-
-BLUFF-RAG-500 builds upon several established benchmarks:
-- **RAGBench (2023)**: Factuality/robustness
-- **PubMedQA (2019)**: Medical QA with confidence
-- **MedMCQA (2022)**: Multiple choice with explanations
-- **CalibRAG (2024)**: Synthetic calibration triples
-- **CLIMATEX (2023)**: Expert confidence levels
 
 ## 🔬 Experimental Setup
 
@@ -141,38 +137,25 @@ BLUFF-RAG-500 builds upon several established benchmarks:
 - **Gemini**
 
 ### Domains Covered
-- Medicine
 - Climate Science
 - Technology
-- General Knowledge
+- Current Events
+- Astronomy
+- Finance
+- History
+- Law
+- Psychology
+- Public Health
 - Politics
+- Sports
 
-## 📊 Results Format
+## Made With:
 
-Evaluation results include:
-```json
-{
-  "model_name": "openai",
-  "num_items": 100,
-  "metrics": {
-    "expected_calibration_error": 0.15,
-    "overconfidence_index": 0.23,
-    "brier_score": 0.18,
-    "confidence_accuracy_correlation": 0.67
-  },
-  "individual_results": [...]
-}
-```
+Website: HTML/CSS, Javascript
+Dataset Creation: Python
+Metric Calculations: Python
 
 
-## 📚 Citation
 
-If you use BLUFF-RAG-500 in your research, please cite:
 
-```bibtex
-@misc{bluff-rag-500,
-  title={BLUFF-RAG-500: Benchmark for Large Language Model Understanding of Factual Fallibility in Retrieval-Augmented Generation},
-  author={Ron, Emma, Daniel, and Ahan},
-  year={2024},
-  url={https://github.com/Ahanmr/BLUFF-RAG500}
-}
+
