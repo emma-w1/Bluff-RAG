@@ -2,7 +2,7 @@
 
 > **Benchmark for Large Language Model Understanding of Factual Fallibility in Retrieval-Augmented Generation**
 
-BLUFF-1000 is a comprehensive benchmark and evaluation harness for assessing calibration-aware Retrieval-Augmented Generation (RAG) systems across multiple models (GPT-4o, LLaMA-2/70B, Mistral-7B, Gemini). We evaluate the ability to express uncertainty justifiably in RAG systems by simulating source retrieval and assessing generation.
+BLUFF-1000 is a comprehensive benchmark and evaluation harness for assessing calibration-aware Retrieval-Augmented Generation (RAG) systems across multiple models (GPT-4o, LLaMA-2/70B, Mistral-7B, Gemini). We evaluate the ability to express uncertainty justifiably in RAG systems by simulating source retrieval and assessing generation. This topic is especially important, since real-world RAG systems often retrieve unreliable or contradictory information from sources.
 
 
 ## Core Hypotheses
