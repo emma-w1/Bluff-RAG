@@ -1,4 +1,4 @@
-h1.hero-title{
+h1.title{
     color: #d14234!important;
 }
 
@@ -10,7 +10,11 @@ h1.hero-title{
     color: white;
 }
 
-.container-fluid{
+.main-hero{
     background-color: #646663;
+}
+
+.btn{
+    font-weight:bold!important;
 }
 

@@ -14,12 +14,10 @@
   </head>
   <body>
     <div class="container-header">
-      <header
-        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
-      >
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-0">
         <a
           href="/"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+          class="d-flex align-items-center mb-0 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
         >
           <svg class="bi me-2" width="40" height="32" aria-hidden="true">
             <use xlink:href="#bootstrap"></use>
@@ -34,7 +32,7 @@
         </a>
       </header>
     </div>
-    <div class="container-fluid px-4 py-5 no-gutters">
+    <div class="container-fluid px-4 py-5 no-gutters main-hero">
       <div class="row flex-lg-row-reverse align-items-center g-5">
         <div class="col-10 col-sm-8 col-lg-6">
           <img
@@ -46,20 +44,317 @@
             loading="lazy"
           />
         </div>
-        <div class="col-lg-6 hero-color px-10">
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 hero-title" >
+        <div class="col-lg-6 hero-color px-5">
+          <h1 class="display-1 fw-bold text-body-emphasis lh-1 mb-4 title">
             BLUFF-1000
           </h1>
-          <h3 class="hero-subtitle mb-4">
-            Evaluating RAG Linguistic Uncertainty under Poor Retrieval Conditions
+          <h3 class="hero-subtitle mb-5">
+            Evaluating RAG Linguistic Uncertainty under Poor Retrieval
+            Conditions
           </h3>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
-              Primary
-            </button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
-              Default
-            </button>
+            <a
+              href="#about"
+              type="button"
+              class="btn btn-danger btn-lg px-4 me-md-2"
+            >
+              About
+            </a>
+            <a
+              href="#paper-summary"
+              type="button"
+              class="btn btn-outline-danger btn-lg px-4"
+            >
+              Paper
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid px-4 py-5 my-5 text-center">
+      <h1 class="display-3 fw-bold text-body-emphasis title" id="about">
+        About
+      </h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead my-4">
+          <strong>
+            BLUFF-1000 is a comprehensive benchmark created to test a model's
+            ability to appropriately express linguistic uncertainty when
+            provided unreliable or irrelevant content from a retrieval system.
+            It contains 500 question-answering tasks across 10 distinct domains,
+            amounting to 1000 model responses under both clear and ambiguous
+            contexts. Each entry consists of a query, a clear and ambiguous
+            source set, and 2 gold responses that reflect the uncertainty of the
+            context. BLUFF-1000 contributes to existing research by highlighting
+            the gap between external confidence expression and source quality.
+          </strong>
+        </p>
+        <p class="my-5">
+          We are currently in the process of submitting to non-archival
+          workshops and publishing on Arxiv, but our submission is linked below!
+        </p>
+        <div class="d-grid gap-4 d-sm-flex justify-content-sm-center">
+          <a
+            href="https://drive.google.com/file/d/1DU7bJcBRlZOCcq-1LhRDx-JnWdwA1aba/view?usp=sharing"
+            type="button"
+            class="btn btn-danger btn-lg px-5 gap-3"
+          >
+            📄 Paper
+          </a>
+          <a
+            href="https://github.com/rzharzhavsky/Bluff-1000"
+            type="button"
+            class="btn btn-danger btn-lg px-5 gap-3"
+          >
+            💻 Code
+          </a>
+          <button type="button" class="btn btn-danger btn-lg px-4" disabled>
+            Citation coming soon!
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="my-5" id="paper-summary">
+      <div class="p-5 text-center bg-body-tertiary">
+        <div class="container py-5 mb-4">
+          <h1 class="display-3 fw-bold text-body-emphasis title mb-4">
+            Paper Summary
+          </h1>
+
+          <div class="row text-start gx-5 gy-2">
+            <div class="col-lg-6">
+              <h3 class="mb-3">Abstract:</h3>
+              <p class="lead">
+                Retrieval-augmented generation (RAG) systems often fail to
+                adequately modulate their linguistic certainty when evidence
+                deteriorates. This gap in how models respond to imperfect
+                retrieval is critical for the safety and reliability in
+                real-world RAG systems. To address this gap, we propose
+                BLUFF-1000, a benchmark systematically designed to evaluate how
+                large language models (LLMs) manage linguistic confidence under
+                conflicting evidence to simulate poor retrieval. We created a
+                dataset, introduced two metrics, and calculated comprehensive
+                metrics to quantify faithfulness, factuality, linguistic
+                uncertainty, and calibration. Finally, we tested generation
+                components of RAG systems with controlled experiments on seven
+                LLMs using the benchmark, measuring their awareness of
+                uncertainty and general performance. While not definitive, our
+                observations reveal initial indications of a misalignment
+                between uncertainty and source quality across seven
+                state-of-the-art RAG systems, underscoring the value of
+                continued benchmarking in this space. We recommend that future
+                RAG systems refine uncertainty-aware methods to convey
+                confidence throughout the system transparently.
+              </p>
+            </div>
+
+            <div class="col-lg-6">
+              <h3 class="mb-3">Novel Contributions:</h3>
+              <ul class="lead">
+                <li>
+                  The creation of BLUFF-1000, a novel benchmark that measures a
+                  model’s ability to express uncertainty in responses.
+                  BLUFF-1000 includes questions spanning multiple subject areas
+                  to encourage variability in domains. 500 questions with two
+                  source sets are included, amounting to 1000 model responses.
+                </li>
+                <li>
+                  The creation of a novel metric to measure verbal uncertainty,
+                  named the Verbal Uncertainty Index (VUI). VUI quantifies the
+                  frequency of hedge words in a response with respect to
+                  accuracy and identifies the extent to which a model uses
+                  linguistic uncertainty when necessary.
+                </li>
+                <li>
+                  The creation of a novel metric, labeled Ambiguity Sensitivity
+                  Index (ASI), used to quantify changes in a model’s confidence
+                  changes when evidence shifts from clear to ambiguous. Models
+                  that can recognize when the sources ”retrieved” are unreliable
+                  or contradictory exhibit a higher ASI score.
+                </li>
+                <li>
+                  Evaluation uncovers a fundamental misalignment between
+                  linguistic confidence expression and source quality across
+                  seven state-of-the-art LLMs, demonstrating that current RAG
+                  systems fail to appropriately modulate their linguistic
+                  certainty when evidence quality degrades.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row text-start mt-5">
+            <div class="col-12">
+              <h2 class="mb-3 text-center">Comprehensive Metric Comparison</h2>
+              <p class="lead mb-4">
+                This table showcases the performance of various models on the
+                BLUFF-1000 benchmark. Models are evaluated based on their
+                ability to accurately express linguistic uncertainty in response
+                to queries with both clear and ambiguous contexts. Additionally,
+                source retrieval, factuality, and faithfulness were also
+                measured to provide a comprehensive assessment of each model's
+                capabilities.
+              </p>
+              <img
+                src="./img/performance_metrics.png"
+                class="d-block mx-lg-auto img-fluid"
+                alt="Metric Comparison"
+                width="800"
+                height="400"
+                loading="lazy"
+              />
+              <h4 class="my-4">Metric Definitions:</h4>
+              <ul>
+                <li>
+                  <b>Ambiguity Sensitivity Index (ASI)</b> evaluates whether the
+                  model appropriately lowers confidence and raises hedging when
+                  faced with ambiguous sources.
+                </li>
+                <li>
+                  <b>Verbal Uncertainty Index (VUI)</b> evaluates how precisely
+                  the model uses hedged language, measuring the F1-score of
+                  hedge detection.
+                </li>
+                <li>
+                  <b>Source Set on Hedging</b> measures the change in hedging
+                  rate between clear and ambiguous questions throughout the
+                  dataset.
+                </li>
+                <li>
+                  <b>Lexical Overconfidence Index</b> measures the overconfident
+                  language in incorrect answers.
+                </li>
+                <li>
+                  <b>Hedge Precision</b> measures the proportion of hedges used
+                  appropriately when the model is incorrect.
+                </li>
+                <li>
+                  <b>Hedge Recall</b> measures the proportion of incorrect
+                  answers in which hedging was used.
+                </li>
+                <li>
+                  <b>Refusal Count</b> measures the proportion of questions
+                  where the confidence of the model drops below the 15th
+                  percentile threshold, causing it to refuse to answer.
+                </li>
+                <li>
+                  <b>Refusal Sensitivity</b> measures the difference in refusal
+                  rate of the model between ambiguous and clear information
+                  sets.
+                </li>
+                <li>
+                  <b>Answer Correctness</b> measures the average correctness
+                  across all answered questions.
+                </li>
+                <li>
+                  <b>Overall Faithfulness</b> evaluates an LLM’s ability to stay
+                  faithful to information from the sources it retrieves with RAG
+                  while avoiding the hallucination of information.
+                </li>
+              </ul>
+            </div>
+            <div class="row text-start gx-5 gy-2">
+              <h3 class="mb-4">Methodology: Dataset Generation</h3>
+              <div class="col-lg-6">
+                <img
+                  src="./img/qa_pair_generation_workflow.png"
+                  class="d-block mx-lg-auto img-fluid"
+                  alt="Methodology"
+                  width="250"
+                  height="150"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-lg-6">
+                <img
+                  src="./img/source_classification_flowchart.png"
+                  class="d-block mx-lg-auto img-fluid"
+                  alt="Methodology"
+                  width="325"
+                  height="200"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="row text-start mt-5">
+              <div class="col-12">
+                <h3 class="mb-4">Results</h3>
+                <p class="lead mb-4">
+                  The evaluation of various models on the BLUFF-1000 benchmark
+                  revealed several key insights into their performance and
+                  capabilities in handling linguistic uncertainty. A
+                  misalignment between linguistic uncertainty expression and
+                  source quality was also observed across all models tested,
+                  indicating that current RAG systems struggle to appropriately
+                  adjust their confidence levels in response to varying evidence
+                  quality. The results highlight the need for further research
+                  and development in this area to enhance the reliability and
+                  safety of RAG systems in real-world applications.
+                </p>
+              </div>
+            </div>
+            <div class="row text-start gx-5 gy-2 mt-3">
+              <div class="col-3">
+                <img
+                  src="./img/figure3.png"
+                  class="d-block mx-lg-auto img-fluid"
+                  alt="ASI Comparison"
+                  width="500"
+                  height="250"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="./img/figure4_without_legend.png"
+                  class="d-block mx-lg-auto img-fluid"
+                  alt="ASI Comparison"
+                  width="500"
+                  height="250"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="./img/figure5.png"
+                  class="d-block mx-lg-auto img-fluid"
+                  alt="ASI Comparison"
+                  width="500"
+                  height="250"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="./img/figure6.png"
+                  class="d-block mx-lg-auto img-fluid"
+                  alt="ASI Comparison"
+                  width="500"
+                  height="250"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="row text-start mt-5">
+              <h3 class="mb-4">Conclusion</h3>
+              <p class="lead mb-4">
+                We proposed BLUFF-1000, a benchmark constructed to evaluate how
+                LLMs manage linguistic confidence under imperfect retrieval
+                conditions. Along with various other metrics for answer
+                correctness, faithfulness, refusals, and numerical
+                overconfidence, we provide a framework for evaluating generation
+                components of RAG systems. We evaluate modern LLMs using
+                gathered sources, varying the source sets provided to models for
+                each question. Through these methods, our most important finding
+                was the consistent patterns of misaligned hedging. After
+                conducting a controlled experiment on the generation aspect, our
+                findings indicated that future progress in full RAG pipelines as
+                a whole must include developments in uncertainty-aware methods
+                to transparently convey confidence throughout the system. This
+                benchmark provides a foundation for measuring and eventually
+                improving this aspect of model trustworthiness, which is
+                critical for LLMs that serve the user.
+              </p>
+            </div>
           </div>
         </div>
       </div>
